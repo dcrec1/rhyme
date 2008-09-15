@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://www.mouseoverstudio.com/blog/" 
   s.platform = Gem::Platform::RUBY 
   s.summary = "A Java to Ruby objects translator" 
-  s.files = ["lib/rhyme.rb"
+  s.files = ["lib/rhyme.rb",
              "lib/rhyme/version.rb"]
   s.require_path = "lib" 
   s.test_file = "test/test_rhyme.rb" 
