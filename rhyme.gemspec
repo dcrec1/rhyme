@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.homepage = "http://www.mouseoverstudio.com/blog/" 
   s.platform = Gem::Platform::RUBY 
   s.summary = "A Java to Ruby objects translator" 
-  candidates = Dir.glob("{doc,lib,tests}/**/*") 
-  s.files = candidates.delete_if { |item| item.include?("rdoc") }
+  s.files = ["lib/rhyme.rb"
+             "lib/rhyme/version.rb"]
   s.require_path = "lib" 
   s.test_file = "test/test_rhyme.rb" 
   s.has_rdoc = true 
