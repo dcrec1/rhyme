@@ -1,5 +1,4 @@
-require 'rubygems' 
-SPEC = Gem::Specification.new do |s| 
+Gem::Specification.new do |s| 
   s.name = "Rhyme" 
   s.version = "0.0.1" 
   s.author = "Diego Carrion" 

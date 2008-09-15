@@ -12,15 +12,18 @@ FIX (describe your package)
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+  require "java"
+  map = java.util.HashMap.new
+  ... (populate map) ...
+  hash = Rhyme.translate(map)
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+  jruby
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+  sudo gem install 
 
 == LICENSE:
 
