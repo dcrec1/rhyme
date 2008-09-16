@@ -1,5 +1,5 @@
 Gem::Specification.new do |s| 
-  s.name = "Rhyme" 
+  s.name = "rhyme" 
   s.version = "0.0.1" 
   s.author = "Diego Carrion" 
   s.email = "dc.rec1@gmail.com" 
