@@ -1,6 +1,6 @@
 require "rubygems"
 require "rhyme"
 
-def translate()
-	Rhyme.translate($object)
+def translate(object)
+	Rhyme.translate(object)
 end

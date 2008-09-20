@@ -22,4 +22,8 @@ describe Rhyme do
     Rhyme.translate(java.util.Date.new(1234567890)).to_s.should eql("2009-02-13")
   end
   
+  it "should translate an ArrayList" do
+  	Rhyme.translate(java.util.ArrayList.new).class.should eql(Array.new.class)
+  end
+  
 end

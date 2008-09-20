@@ -6,6 +6,7 @@ module Rhyme
     case x.class.to_s
       when "Java::JavaUtil::HashMap" then self.translate_map(x)
       when "Java::JavaUtil::Date" then self.translate_date(x)
+      when "Java::JavaUtil::ArrayList" then self.translate_array_list(x)
       else x
     end
   end
@@ -18,6 +19,12 @@ module Rhyme
   
   def self.translate_date(javaDate)
     Date.parse(Time.at(javaDate.getTime).strftime('%Y/%m/%d'))
+  end
+  
+  def self.translate_array_list(array_list)
+  	array = Array.new
+  	array_list.each { |x| array.push x }
+  	return array
   end
   
 end

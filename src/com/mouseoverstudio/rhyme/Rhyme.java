@@ -3,22 +3,25 @@ package com.mouseoverstudio.rhyme;
 import static com.mouseoverstudio.mosju.Mosju.jruby;
 import static com.mouseoverstudio.mosju.Mosju.readerOf;
 
-import javax.script.Compilable;
-import javax.script.CompiledScript;
-import javax.script.ScriptContext;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptException;
-import javax.script.SimpleScriptContext;
 
 public class Rhyme {
 
-	private static CompiledScript compiledScript;
+	private static ScriptEngine engine;
+	private static Invocable invocable;
+	private static Set includedGems;
 
 	static {
 		try {
-			ScriptEngine engine = jruby();
+			engine = jruby();
 			engine.eval(readerOf("com/mouseoverstudio/rhyme/mim.rb"));
-			compiledScript = ((Compilable) engine).compile("translate()");
+			invocable = (Invocable) engine;
+			includedGems = new HashSet<String>();
 		} catch (ScriptException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -26,12 +29,20 @@ public class Rhyme {
 	}
 
 	public static Object translate(Object obj) {
-		SimpleScriptContext context = new SimpleScriptContext();
-		context.setAttribute("object", obj, ScriptContext.ENGINE_SCOPE);
 		try {
-			return compiledScript.eval(context);
+			return invocable.invokeFunction("translate", obj);
 		} catch (ScriptException e) {
 			throw new RuntimeException(e);
+		} catch (NoSuchMethodException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	public static void require(String text) throws ScriptException {
+		if (!includedGems.contains(text)) {
+			engine.eval("require '" + text + "'");
+			includedGems.add(text);
+			invocable = (Invocable) engine;
 		}
 	}
 
