@@ -12,13 +12,13 @@ h2. USAGE:
 
 In *Ruby*:
 
-Rhyme.translate([{ "date" => Date.new}])
+	Rhyme.translate([{ "date" => Date.new}])
 
 In *Java*:
 
-List array = new ArrayList();
-...
-Rhyme.translate(array);
+	List array = new ArrayList();
+	...
+	Rhyme.translate(array);
 
 h2. REQUIREMENTS:
 
