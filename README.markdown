@@ -1,21 +1,24 @@
 = rhyme
 
-* FIX (url)
+A Java to Ruby and Ruby to Java objects translator
 
 == DESCRIPTION:
 
-FIX (describe your package)
+Sometimes you have a Ruby object (a Hash for example) and you want to call a Java method that expects an object of an equivalent class (HashMap in this case). Instead of converting the object and all others inside manually to the Java similar you can tranlaste them all very easy using Rhyme.
 
-== FEATURES/PROBLEMS:
-
-* FIX (list of features or problems)
+Also, you may have a Ruby method/function that is being called from Java with Java objects as parameters, you can convert them all with Rhyme so they could be compatible with others operations, like some Ruby API.
 
 == SYNOPSIS:
 
-  require "java"
-  map = java.util.HashMap.new
-  ... (populate map) ...
-  hash = Rhyme.translate(map)
+  In Ruby:
+
+  Rhyme.translate([{ "date" => Date.new}])
+
+  In Java:
+
+  List array = new ArrayList();
+  ...
+  Rhyme.translate(array);
 
 == REQUIREMENTS:
 
@@ -23,7 +26,7 @@ FIX (describe your package)
 
 == INSTALL:
 
-  sudo gem install 
+  sudo gem install rhyme
 
 == LICENSE:
 
