@@ -22,7 +22,7 @@ In *Java*:
 
 h2. REQUIREMENTS:
 
-  jruby
+JRuby
 
 h2. INSTALL:
 
