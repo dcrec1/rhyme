@@ -11,5 +11,5 @@ Gem::Specification.new do |s|
   s.require_path = "lib/" 
   s.test_file = "test/test_rhyme.rb" 
   s.has_rdoc = false 
-  s.extra_rdoc_files = ["README.markdown"]
+  s.extra_rdoc_files = ["README.textile"]
 end

@@ -1,3 +1,3 @@
 lib/rhyme.rb
 lib/rhyme/version.rb
-README.markdown
+README.textile
