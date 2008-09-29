@@ -1,70 +1,42 @@
-h1. rhyme
+h1. Rhyme tranlastor
 
-h1. &#x2192; 'rhyme'
+h1. -> 'rhyme'
+
 
 
 h2. What
+
+A Java to Ruby and Ruby to Java objects translator
 
 
 h2. Installing
 
 <pre syntax="ruby">sudo gem install rhyme</pre>
 
+
 h2. The basics
+
+Sometimes you have a Ruby object (a Hash for example) and you want to call a Java method that expects an object of an equivalent class (HashMap in this case). Instead of converting the object and all others inside manually to the Java similar you can tranlaste them all very easy using Rhyme.
+
+Also, you may have a Ruby method/function that is being called from Java with Java objects as parameters, you can convert them all with Rhyme so they could be compatible with others operations, like some Ruby API.
 
 
 h2. Demonstration of usage
 
+<pre syntax="rubyforge">hash_map = Rhyme.translate(hash)</pre>
 
 
-h2. Forum
-
-"http://groups.google.com/group/rhyme":http://groups.google.com/group/rhyme
-
-TODO - create Google Group - rhyme
-
-h2. How to submit patches
-
-Read the "8 steps for fixing other people's code":http://drnicwilliams.com/2007/06/01/8-steps-for-fixing-other-peoples-code/ and for section "8b: Submit patch to Google Groups":http://drnicwilliams.com/2007/06/01/8-steps-for-fixing-other-peoples-code/#8b-google-groups, use the Google Group above.
-
-TODO - pick SVN or Git instructions
+h2. Source
 
 The trunk repository is <code>svn://rubyforge.org/var/svn/rhyme/trunk</code> for anonymous access.
 
 OOOORRRR
 
-You can fetch the source from either:
+You can fetch the source from:
 
-<% if rubyforge_project_id %>
+* github: "http://github.com/dcrec1/rhyme/tree/master":http://github.com/dcrec1/rhyme/tree/master
 
-* rubyforge: "http://rubyforge.org/scm/?group_id=<%= rubyforge_project_id %>":http://rubyforge.org/scm/?group_id=<%= rubyforge_project_id %>
-
-<pre>git clone git://rubyforge.org/rhyme.git</pre>
-
-<% else %>
-
-* rubyforge: MISSING IN ACTION
-
-TODO - You can not created a RubyForge project, OR have not run <code>rubyforge config</code>
-yet to refresh your local rubyforge data with this projects' id information.
-
-When you do this, this message will magically disappear!
-
-Or you can hack website/index.txt and make it all go away!!
-
-<% end %>
-
-* github: "http://github.com/GITHUB_USERNAME/rhyme/tree/master":http://github.com/GITHUB_USERNAME/rhyme/tree/master
-
-<pre>git clone git://github.com/GITHUB_USERNAME/rhyme.git</pre>
-
-
-TODO - add "github_username: username" to ~/.rubyforge/user-config.yml and newgem will reuse it for future projects.
-
-
-* gitorious: "git://gitorious.org/rhyme/mainline.git":git://gitorious.org/rhyme/mainline.git
-
-<pre>git clone git://gitorious.org/rhyme/mainline.git</pre>
+<pre>git clone git://github.com/dcrec1/rhyme.git</pre>
 
 h3. Build and test instructions
 
@@ -77,7 +49,7 @@ h2. License
 
 This code is free to use under the terms of the MIT license. 
 
+
 h2. Contact
 
-Comments are welcome. Send an email to "Diego Carrion":mailto:dc.rec1@gmail.com via the "forum":http://groups.google.com/group/rhyme
-
+Comments are welcome, send an email to "Diego Carrion":mailto:dc.rec1@gmail.com

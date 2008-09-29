@@ -1,6 +1,6 @@
 Gem::Specification.new do |s| 
   s.name = "rhyme" 
-  s.version = "0.0.1" 
+  s.version = "0.1.3" 
   s.author = "Diego Carrion" 
   s.email = "dc.rec1@gmail.com" 
   s.homepage = "http://www.mouseoverstudio.com/blog/" 
@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.summary = "A Java to Ruby objects translator" 
   s.files = ["lib/rhyme.rb",
              "lib/rhyme/version.rb"]
-  s.require_path = "lib" 
+  s.require_path = "lib/" 
   s.test_file = "test/test_rhyme.rb" 
-  s.has_rdoc = true 
+  s.has_rdoc = false 
   s.extra_rdoc_files = ["README.txt"]
 end
